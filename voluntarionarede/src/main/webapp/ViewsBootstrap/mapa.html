@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <title>Google Maps API v3: Criando um mapa personalizado</title>
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDRlimL0AqioJwVq8vQDpOgniIq2OS1Mag&amp;sensor=false"></script>
+        <script type="text/javascript" src="mapa.js"></script>
+    </head>
+
+
+    <body>
+        
+        <form action="index.html">
+            <fieldset>
+                <legend>Google Maps</legend>   
+
+                <div>
+                    <label for="txtEndereco">Endereço:</label>
+                    <input type="text" id="txtEndereco" name="txtEndereco" />
+                </div>
+                <div>
+                    <input type="button" id="btnEndereco" name="btnEndereco" value="Mostrar no mapa" />
+                </div>
+
+                <div id="mapa" style="height: 500px; width: 500px">
+
+                </div>
+
+                <div>
+                    <input type="submit" value="Enviar" name="btnEnviar" />
+                </div>
+
+                <input type="hidden" id="txtLatitude" name="txtLatitude" />
+                <input type="hidden" id="txtLongitude" name="txtLongitude" />
+            </fieldset>
+        </form>
+
+    </body>
+</html>
