@@ -6,7 +6,7 @@ public class Voluntario {
 
 	int id;
 	Usuario usuario;
-	String imagemVoluntario;
+	byte [] imagemVoluntario;
 	ArrayList<Causa> causas;
 	ArrayList<Habilidade>habilidades;
 }

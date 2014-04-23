@@ -4,9 +4,10 @@ import java.util.Date;
 
 public class Cadastro {
 	int id;
-	boolean cancelado;
+	boolean isCancelado;
+	StatusCadastro status;
 	Date dataCancelamento;
-	Date data;
+	Date dataCadastro;
 	Projeto projeto;
 	Voluntario voluntario;
 	

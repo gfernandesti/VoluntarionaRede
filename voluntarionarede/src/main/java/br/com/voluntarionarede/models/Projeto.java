@@ -5,12 +5,13 @@ import java.util.Date;
 
 public class Projeto {
 	int id;
+	ONG ong;
 	String nome;
 	String email;
 	String detalhes;
 	String responsavel;
 	String telefone;
-	String imagemProjeto;
+	byte[] imagemProjeto;
 	ArrayList<Causa>causas;
 	Endereco endereco;
 	boolean isFechado;

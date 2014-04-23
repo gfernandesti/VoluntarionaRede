@@ -8,8 +8,8 @@ public class ONG {
 	String nome;
 	String descricao;
 	String detalhe;
-	String Capa;
-	String imagemONG;
+	byte[] Capa;
+	byte[] imagemONG;
 	String webSite;
 	ArrayList<Causa>causas;
 	ArrayList<Voluntario>voluntarios;
