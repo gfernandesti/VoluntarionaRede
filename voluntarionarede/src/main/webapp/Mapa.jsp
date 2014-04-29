@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="utf-8" />
-        <title>Google Maps API v3: Criando um mapa personalizado</title>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<%@ include file="Head.jsp" %>
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDRlimL0AqioJwVq8vQDpOgniIq2OS1Mag&amp;sensor=false"></script>
         <script type="text/javascript" src="mapa.js"></script>
-    </head>
-
-
+    
     <body>
-        
+        <%@include file="cabeçalho.jsp" %>
         <form action="index.html">
             <fieldset>
                 <legend>Google Maps</legend>   
@@ -35,6 +33,9 @@
                 <input type="hidden" id="txtLongitude" name="txtLongitude" />
             </fieldset>
         </form>
-
-    </body>
+<%@ include file="rodape.jsp" %>
+<%@ include file="ModalCadastrarONG.jsp" %>
+<%@ include file="ModalCadastrarUsuario.jsp" %>
+<%@ include file="ModalLogin.jsp" %>	
+</body>
 </html>

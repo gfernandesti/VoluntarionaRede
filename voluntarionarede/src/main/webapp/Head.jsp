@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-   
-<!DOCTYPE html>
-<html lang="pt">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
 <title>Voluntário na Rede!</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
@@ -14,7 +14,12 @@
 <link href="css/style.css" rel="stylesheet">
 <link href="css/teste.css" rel="stylesheet">
 
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+          <script src="js/html5shiv.js"></script>
+        <![endif]-->
 
+<!-- Fav and touch icons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144"
 	href="img/apple-touch-icon-144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114"
@@ -32,29 +37,4 @@
 <script type="text/javascript" src="lightbox.js"></script>
 
 </head>
-<body>
-
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#UsuarioModal').modal('show');
-		});
-	</script>
-
-	<!-- Modal -->
-	<div class="modal fade" id="UsuarioModal" tabindex="-1" role="dialog"
-		aria-labelledby="UsuarioModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				
-				<div class="modal-body">
-					<div class="alert alert-success">${param.nome}Salvo com Sucesso!</div>
-
-				</div>
-
-			</div>
-			<!-- /.modal-content -->
-	</div>
-	<!-- /.modal -->
-	</div>
-</body>
 </html>
