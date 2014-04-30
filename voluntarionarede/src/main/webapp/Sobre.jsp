@@ -5,7 +5,7 @@
 <%@ include file="Head.jsp" %>
 
 <body>
-<%@include file="cabeçalho.jsp" %>
+<%@include file="Cabecalho.jsp" %>
 <h4>
 O Voluntário na Rede é uma aplicação web que conecta pessoas e organizações,
 </h4>

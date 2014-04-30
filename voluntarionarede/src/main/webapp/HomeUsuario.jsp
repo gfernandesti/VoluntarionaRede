@@ -3,34 +3,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <%@ include file="Head.jsp" %>
-<%@ page import="br.com.voluntarionarede.models.*"%>
-<%@ page import="br.com.voluntarionarede.jdbc.UsuarioDao"%>
 <%
-	UsuarioDao dao = new UsuarioDao();
-	if (request.getParameter("login") != null) {
-
-		for (Usuario usuario : dao.getLista()) {
-			if (usuario.getPrimeiroNome().equals(
-					request.getParameter("nome"))
-					&& usuario.getEmail().equals(
-							request.getParameter("email"))) {
-				System.out.println(usuario.getPrimeiroNome());
-				session.setAttribute("userName",
-						request.getParameter("nome"));
-				session.setAttribute("userPass",
-						request.getParameter("email"));
-			}
-		}
-	} else if (request.getParameter("logoff") != null) {
-		session.removeAttribute("userName");
-		session.removeAttribute("userPass");
-		response.sendRedirect("Home.jsp");
-	}
+    if (session.getAttribute("userName") == null) {
+        response.sendRedirect("Home.jsp");
+    }
 %>
 <body>
 	<div class="container">
 		<div class="row clearfix">
-			<%@include file="Cabecalho.jsp" %>
+			<%@include file="CabecalhoUsuario.jsp" %>
 			<h4>Procure por Ações ou ONG's</h4>
 			<div class="row clearfix">
 				<div class="col-md-12 column">
@@ -107,20 +88,10 @@
 			</div>
 		</div>
 	</div>
-<%
-		if (session.getAttribute("userName") == null) {%>
-			<%@ include file="ModalLogin.jsp" %>	
-	<%
-		} else {
-			RequestDispatcher rd = request
-					.getRequestDispatcher("HomeUsuario.jsp");
-			rd.forward(request, response);
 
-		}
-	%>
 <%@ include file="rodape.jsp" %>
 <%@ include file="ModalCadastrarONG.jsp" %>
 <%@ include file="ModalCadastrarUsuario.jsp" %>
-		
+<%@ include file="ModalLogin.jsp" %>			
 </body>
 </html>

@@ -8,7 +8,7 @@
         <script type="text/javascript" src="mapa.js"></script>
     
     <body>
-        <%@include file="cabeçalho.jsp" %>
+        <%@include file="Cabecalho.jsp" %>
         <form action="index.html">
             <fieldset>
                 <legend>Google Maps</legend>   

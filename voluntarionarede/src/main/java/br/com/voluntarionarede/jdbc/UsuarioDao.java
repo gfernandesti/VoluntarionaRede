@@ -59,19 +59,19 @@ public class UsuarioDao {
 	public List<Usuario> getLista() {
 		try {
 			//cria um list do tipo Contato
-			List<Usuario> listadecontatos = new ArrayList<Usuario>();
+			List<Usuario> listadeusuarios = new ArrayList<Usuario>();
 			//cria objeto para injetar comando tipo select no banco
 			PreparedStatement stmt = this.conexao
-					.prepareStatement("select * from contatos");
+					.prepareStatement("select * from Usuario");
 			//objeto resultset consegue guardar valor encontrado
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
 				// Criando o objeto contato
 				Usuario usuario = new Usuario();
 				//Seta no objeto contato o q "rs" pegou no banco
-				usuario.setId(rs.getInt("id"));
-				usuario.setPrimeiroNome(rs.getString("primeironome"));
-				usuario.setEmail(rs.getString("email"));
+				usuario.setId(rs.getInt("Usuario_id"));
+				usuario.setPrimeiroNome(rs.getString("Usuario_primeiroNome"));
+				usuario.setEmail(rs.getString("Usuario_email"));
 				/*usuario.setEndereco(rs.getObject(""));
 				// montando a data através do Calendar
 				Calendar data = Calendar.getInstance();
@@ -80,11 +80,11 @@ public class UsuarioDao {
 				contato.setDataNascimento(data);*/
 
 				// adicionando objeto a lista
-				listadecontatos.add(usuario);
+				listadeusuarios.add(usuario);
 			}
 			rs.close();
 			stmt.close();
-			return listadecontatos;
+			return listadeusuarios;
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
