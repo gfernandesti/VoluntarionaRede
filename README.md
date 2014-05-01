@@ -8,4 +8,4 @@ O Voluntário na Rede é uma aplicação web que conecta pessoas e organizaçõe
 
 ----------
 
-  [2]: https://dl.dropboxusercontent.com/u/25443479/VoluntarionaRede/prot%C3%B3tipo.png
+  [2]: https://dl.dropboxusercontent.com/u/25443479/VoluntarionaRede/imgs/prot%C3%B3tipo.png
